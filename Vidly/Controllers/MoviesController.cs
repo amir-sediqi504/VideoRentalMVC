@@ -9,11 +9,21 @@ namespace Vidly.Controllers
     public class MoviesController : Controller
     {
         //
-        // GET: /Movies/
-        public ActionResult Index()
+        // GET: /Movies/random
+        public ActionResult Random()
         {
             var movie = new Movie() { Name = "mr & mrs sediqi" };
-            return View();
+            return View(movie);
+        }
+        // Get: /movies/param
+        public ActionResult Param(int id)
+        {
+            return Content  ("id = " + id);
+        }
+
+        public ActionResult ByReleaseDate(int year, int month)
+        {
+            return Content(year +"/ " + month);
         }
 	}
 }
