@@ -12,7 +12,7 @@ namespace Vidly.Controllers
         // GET: /Movies/
         public ActionResult Index()
         {
-            var movie = new Movie(){Name="mr & mrs sediqi"}
+            var movie = new Movie() { Name = "mr & mrs sediqi" };
             return View();
         }
 	}
