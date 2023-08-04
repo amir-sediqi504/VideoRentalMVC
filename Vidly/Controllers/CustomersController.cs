@@ -20,5 +20,13 @@ namespace Vidly.Controllers
 
             return View(customers);
         }
+        // details action method
+        public ActionResult Details(int id)
+        {
+            
+            var customer = new Customer { Id = id, Name = "Sample Customer" };
+
+            return View(customer);
+        }
     }
 }

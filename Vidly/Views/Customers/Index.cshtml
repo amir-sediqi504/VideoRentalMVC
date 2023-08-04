@@ -14,13 +14,17 @@
             </tr>
         </thead>
         <tbody>
+            
             @foreach (var customer in Model)
             {
                 <tr>
                     
                     <td>@customer.Name</td>
-                </tr>
+                    <td>
+                        <a href="@Url.Action("Details", "Customers", new { id = customer.Id })">Details</a>
+                    </td></tr>
             }
+                
         </tbody>
     </table>
 </body>
