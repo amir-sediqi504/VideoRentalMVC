@@ -183,6 +183,10 @@
     <Compile Include="Migrations\202308051612101_Annotations.Designer.cs">
       <DependentUpon>202308051612101_Annotations.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202308051838449_populatecustomers.cs" />
+    <Compile Include="Migrations\202308051838449_populatecustomers.Designer.cs">
+      <DependentUpon>202308051838449_populatecustomers.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\Customer.cs" />
@@ -267,6 +271,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202308051612101_Annotations.resx">
       <DependentUpon>202308051612101_Annotations.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202308051838449_populatecustomers.resx">
+      <DependentUpon>202308051838449_populatecustomers.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
