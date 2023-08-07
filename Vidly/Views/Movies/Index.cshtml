@@ -5,5 +5,33 @@
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<h2>@Model.Name</h2>
+<h2>Movies</h2>
+
+<button class="btn btn-primary" onclick="redirectToNewMovie()">NEW MOVIE</button>
+
+<script>
+    function redirectToNewMovie() {
+        window.location.href = "/Movies/new";
+    }
+</script>
+
+
+<table class="table table-bordered table-hover">
+    <thead>
+        <tr>
+            <th>Movier</th>
+            <th>Genre</th>
+        </tr>
+    </thead>
+    <tbody>
+        
+            <tr>
+                <td></td>
+                <td></td>
+            </tr>
+        
+    </tbody>
+</table>
+
+
 
