@@ -42,13 +42,23 @@ namespace Vidly.Controllers.APIs
         }
 
         // PUT api/customers2/5
-        public void Put(int id, [FromBody]string value)
+        [HttpPost]
+        public void UpdateCustomer(int id, Customer customer)
         {
+            var customerInDb = _context.Customers.SingleOrDefault(c => c.Id == id);
+            customerInDb.Name = customer.Name;
+            customerInDb.Birthdate = customer.Birthdate;
+            customerInDb.IsSubscribedToNewsLetter = customer.IsSubscribedToNewsLetter;
+            customerInDb.MembershipTypeId = customer.MembershipTypeId;
+            _context.SaveChanges();
         }
 
         // DELETE api/customers2/5
+        [HttpDelete]
         public void Delete(int id)
         {
+            var customer = _context.Customers.SingleOrDefault(c => c.Id == id);
+            _context.Customers.Remove(customer);
         }
     }
 }
