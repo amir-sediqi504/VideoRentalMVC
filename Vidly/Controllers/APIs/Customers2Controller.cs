@@ -26,7 +26,7 @@ namespace Vidly.Controllers.APIs
             var customer = _context.Customers.SingleOrDefault(c => c.Id == id);
             if (customer == null)
             {
-                Console.Write("costumer not found");
+                throw new HttpResponseException(HttpStatusCode.NotFound);
             } else 
             {
                 return customer;
